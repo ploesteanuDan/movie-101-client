@@ -1,0 +1,130 @@
+.DisplayInfoBg {
+  background-color: rgba(20, 20, 20, 0.555);
+  width: 100vw;
+  height: 100vh;
+  color: aliceblue;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.DisplayInfoContainer {
+  background-color: rgba(22, 22, 22, 0.767);
+  width: 55vw;
+  height: 80vh;
+  position: absolute;
+  top: 15vh;
+  left: 22.5vw;
+  border-radius: 1vw;
+  text-align: center;
+  filter: drop-shadow(0 0 1vw rgb(2, 2, 2));
+}
+
+.BackButton {
+  position: absolute;
+  right: 25vw;
+  top: 10vh;
+  border-radius: 1vw;
+  width: 3vw;
+  height: 1.5vw;
+  border-radius: 0.7vw;
+  background-color: rgb(139, 34, 57);
+  color: aliceblue;
+  font-weight: bold;
+  width: 3.5vw;
+  height: 1.8vw;
+  border-radius: 0.7vw;
+  text-align: center;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+  font-size: 0.8vw;
+  line-height: 1.4vw;
+  border: none;
+}
+
+.Thumbnail {
+  height: 20vw;
+  width: 15vw;
+  position: absolute;
+  right: 2vw;
+  top: 2vw;
+  border-radius: 1vw;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+}
+
+.Trailer {
+  position: absolute;
+  top: 2vw;
+  right: 18vw;
+  border-radius: 1vw;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+}
+
+.Title {
+  position: absolute;
+  top: -3vw;
+  left: 2vw;
+  font-size: 2vw;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+  font-weight: bold;
+}
+.Year {
+  position: absolute;
+  top: 24vw;
+  left: 3vw;
+  font-size: 1.3vw;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+}
+.Type {
+  position: absolute;
+  top: 24vw;
+  left: 6.5vw;
+  font-size: 1.3vw;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+}
+.Type::first-letter {
+  text-transform: uppercase;
+}
+
+.Produced {
+  position: absolute;
+  top: 26vw;
+  left: 3vw;
+  font-size: 1.3vw;
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+}
+
+.Plot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 51vw;
+  font-size: 1vw;
+  color: rgba(117, 117, 117, 0.609);
+  font-style: italic;
+  background-color: rgb(10, 10, 10);
+  padding: 2vw;
+  border-radius: 0 0 1vw 1vw;
+}
+
+.Created {
+  height: 20vw;
+  width: 35vw;
+  position: absolute;
+  right: 18vw;
+  top: 2vw;
+  border-radius: 1vw;
+  background-color: rgb(29, 29, 29);
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+}
+
+.CreatedTitle {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border-radius: 1vw 1vw 0 0;
+  background-color: rgb(10, 10, 10);
+}
