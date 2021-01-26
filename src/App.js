@@ -6,26 +6,46 @@ import {
     Route,
     Link,
   } from "react-router-dom";
+import Axios from 'axios'
+import {Spring} from "react-spring/renderprops"
 
 //STYLE
 import "./App.css"
 
 //COMPONENTS
 import Movies from "./components/Movies"
-import Studios from "./components/Studios"
 import Producers from "./components/Producers"
 import Edit from "./components/Edit"
 import DisplayInfo from "./components/DisplayInfo"
 
-
 export default class App extends Component {
     state={
-      displayItem: ""
+      item: "",
+      itemType: "",
+      itemDetails: ""
     }
 
-    getDisplayItem(item){
-      this.setState({displayItem:item})
-      console.log(item)
+    getDisplayItem(item, type){
+      if(type=="movie")
+      {
+        Axios.get('http://localhost:3001/movies/details', { params: { movieID: item.movieID } })
+        .then(
+            (res)=>{
+                this.setState({itemDetails: res.data, item: item, itemType: type})    
+            }
+        ).catch((err)=>{console.log(err)})
+      }
+      else if(type=="producer"){
+        Axios.get('http://localhost:3001/producers/details', { params: { producerID: item.producerID } })
+        .then(
+            (res)=>{
+                this.setState({itemDetails: res.data, item: item, itemType: type})    
+            }
+        ).catch((err)=>{console.log(err)})
+      }
+      else{
+        this.setState({item:"", itemDetails:"", itemType:""})
+      }
     }
 
     render() {
@@ -35,15 +55,19 @@ export default class App extends Component {
               <div>
                   <div className="NavContainer">
                   <nav>
-                    <li>
-                      <Link className="link" to="/">Movies</Link>
-                    </li>
-                    <li>
-                      <Link className="link" to="/producers">Producers</Link>
-                    </li>
-                    <li>
-                      <Link className="link" to="/studios">Studios</Link>
-                    </li>
+                  <Spring
+                    from={{ opacity: 0, display: "flex" }}
+                    to={{ opacity: 1}}>
+                    {props => 
+                      <div style={props}>
+                        <li>
+                          <Link className="link" to="/">Movies</Link>
+                        </li>
+                        <li>
+                          <Link className="link" to="/producers">Producers</Link>
+                        </li>
+                      </div>}
+                  </Spring>
                     <li>
                       <Link className="link" to="/edit">Edit</Link>
                     </li>
@@ -56,9 +80,6 @@ export default class App extends Component {
                   <Route path="/producers">
                       <Producers getDisplayItem={this.getDisplayItem.bind(this)} />
                   </Route>
-                  <Route path="/studios">
-                      <Studios />
-                  </Route>
                   <Route path="/edit">
                       <Edit />
                   </Route>
@@ -68,7 +89,7 @@ export default class App extends Component {
                 </Switch>
               </div>
             </Router>
-            <DisplayInfo getDisplayItem={this.getDisplayItem.bind(this)} item={this.state.displayItem}/>
+            <DisplayInfo getDisplayItem={this.getDisplayItem.bind(this)} type={this.state.itemType} item={this.state.item} itemDetails={this.state.itemDetails}/>
            </div>
         )
     }

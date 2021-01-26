@@ -6,15 +6,14 @@ nav {
   width: 100vw;
   padding-bottom: 1vw;
   margin-bottom: 1vw;
-  background-color: rgb(17, 17, 17);
   z-index: 1000;
-  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+  opacity: 0.9;
 }
 li {
   list-style-type: none;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-left: 11vw;
-  margin-right: -8vw;
+  margin-right: -10vw;
 }
 
 .link {
@@ -22,10 +21,13 @@ li {
   color: aliceblue;
   font-size: 1vw;
   font-weight: bold;
-}
-
-.link:hover {
-  filter: drop-shadow(0 0 0.5vw rgba(216, 216, 216, 0.623));
+  filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
+  background-color: rgb(17, 17, 17);
+  padding-top: 0.3vw;
+  padding-bottom: 0.4vw;
+  padding-left: 0.6vw;
+  padding-right: 0.6vw;
+  border-radius: 1vw;
 }
 
 .Indicator {
@@ -36,7 +38,7 @@ li {
 }
 
 body {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(10, 10, 10);
   overflow-x: hidden;
 }
 

@@ -1,6 +1,7 @@
 //PACKS
 import React, { Component } from 'react'
 import Axios from 'axios'
+import {Spring} from 'react-spring/renderprops'
 
 //STYLE
 import "../styles/Movies.css"
@@ -30,10 +31,24 @@ export default class Movies extends Component {
 
     render() {
         return (
-            <div>
-             <Hero/>
-                <DisplayGrid collection={this.state.movies} w="19vw" h="25vw" getDisplayItem={this.props.getDisplayItem.bind(this)}/>
-            </div>
+            <Spring
+                from={{ 
+                    opacity: 0,
+                    marginTop: "5vw"
+                    
+                    
+                }}
+                to={{ 
+                    opacity: 1,
+                    marginTop: "0px"
+                }}>
+                {props => 
+                    <div style={props}>
+                        <Hero getDisplayItem={this.props.getDisplayItem.bind(this)}/>
+                        <DisplayGrid collection={this.state.movies} w="19vw" h="25vw" getDisplayItem={this.props.getDisplayItem.bind(this)} type="movie"/>
+                    </div>}
+            </Spring>
+ 
         )
     }
 }

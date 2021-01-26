@@ -6,12 +6,12 @@
   position: fixed;
   top: 0px;
   left: 0px;
+  backdrop-filter: blur(9px);
 }
 
 .DisplayInfoContainer {
   background-color: rgba(22, 22, 22, 0.767);
   width: 55vw;
-  height: 80vh;
   position: absolute;
   top: 15vh;
   left: 22.5vw;
@@ -28,7 +28,7 @@
   width: 3vw;
   height: 1.5vw;
   border-radius: 0.7vw;
-  background-color: rgb(139, 34, 57);
+  background: rgb(194, 8, 56);
   color: aliceblue;
   font-weight: bold;
   width: 3.5vw;
@@ -39,6 +39,12 @@
   font-size: 0.8vw;
   line-height: 1.4vw;
   border: none;
+  transition-timing-function: ease-in-out;
+  transition: 0.1s;
+}
+
+.BackButton:hover {
+  filter: drop-shadow(0 0 0.3vw rgba(160, 160, 160, 0.404));
 }
 
 .Thumbnail {
@@ -85,6 +91,22 @@
   text-transform: uppercase;
 }
 
+.DetailsButton {
+  position: absolute;
+  top: 24vw;
+  right: 3vw;
+  font-size: 1.3vw;
+  color: rgba(240, 248, 255, 0.5);
+  border: none;
+  border-right: 5px solid rgba(0, 255, 255);
+  background-color: transparent;
+  transition-timing-function: ease-in-out;
+  transition: 0.1s;
+}
+.DetailsButton:hover {
+  color: rgba(240, 248, 255);
+  border-right: 5px solid rgba(0, 255, 255);
+}
 .Produced {
   position: absolute;
   top: 26vw;
@@ -113,7 +135,7 @@
   right: 18vw;
   top: 2vw;
   border-radius: 1vw;
-  background-color: rgb(29, 29, 29);
+  background-color: rgb(22, 22, 22);
   filter: drop-shadow(0 0 0.5vw rgb(0, 0, 0));
 }
 
@@ -123,8 +145,48 @@
   left: 0;
   top: 0;
   font-weight: bold;
+  font-size: 1vw;
   padding-top: 1vw;
   padding-bottom: 1vw;
   border-radius: 1vw 1vw 0 0;
-  background-color: rgb(10, 10, 10);
+  background-color: rgba(10, 10, 10, 0.897);
+}
+
+.CreatedListContainer {
+  margin-top: 15%;
+  width: 95%;
+  text-align: left;
+  height: 70%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.CreatedList {
+  margin-top: 0;
+  margin-bottom: 3%;
+  margin-left: 5%;
+  display: flex;
+}
+.Field {
+  margin-right: 7%;
+  font-size: 1vw;
+}
+.Field::first-letter {
+  text-transform: capitalize;
+}
+
+.CreatedListContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.CreatedListContainer::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+.CreatedListContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1vw;
+}
+
+.CreatedListContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

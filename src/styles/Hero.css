@@ -32,6 +32,11 @@
     rgba(0, 0, 0, 1) 74%
   );
 }
+
+.HeroTitleText {
+  max-width: 66vw;
+}
+
 .BgContainer {
   top: 0;
   left: 0;
@@ -61,6 +66,31 @@
     180deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(0, 0, 0, 0.444295760296306) 24%,
-    rgb(17, 17, 17) 74%
+    rgba(10, 10, 10) 74%
   );
+}
+
+.Discover {
+  position: absolute;
+  right: 3vw;
+  width: 12vw;
+  bottom: 2vw;
+  height: 4vw;
+  border-radius: 1.5vw;
+  border: none;
+  background: rgb(42, 175, 193);
+  background: linear-gradient(
+    135deg,
+    rgba(42, 175, 193, 1) 24%,
+    rgba(0, 97, 162, 1) 66%
+  );
+  font-size: 2vw;
+  font-weight: bold;
+  color: aliceblue;
+  transition-timing-function: ease-in-out;
+  transition: 0.1s;
+}
+
+.Discover:hover {
+  filter: drop-shadow(0 0 0.5vw rgba(160, 160, 160, 0.404));
 }

@@ -19,7 +19,7 @@
 }
 
 .Card:hover {
-  filter: drop-shadow(0 0 0.3vw rgba(160, 160, 160, 0.404));
+  transform: scale(1.05);
 }
 
 .CardTitle {
@@ -42,6 +42,8 @@
 }
 .CardThumbnail {
   width: 100%;
+  transition-timing-function: ease-in-out;
+  transition: 0.1s;
 }
 
 .NewMovie {

@@ -1,0 +1,95 @@
+.DisplayEditContainer {
+  position: fixed;
+  width: 98vw;
+  height: 100vh;
+  top: 0px;
+  left: 0;
+  backdrop-filter: blur(9px);
+  font-size: 1vw;
+}
+
+.DisplayEdit {
+  position: absolute;
+  width: 25vw;
+  height: 60vh;
+  background-color: rgb(12, 12, 12);
+  top: 15vh;
+  left: 3vw;
+  border-radius: 1vw;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  filter: drop-shadow(0 0 1vw rgb(2, 2, 2));
+}
+.EditTitle {
+  color: aliceblue;
+  font-size: 1vw;
+}
+
+.EditInput {
+  width: 80%;
+  height: 1vh;
+  border-radius: 0.5vw;
+  border: none;
+  background-color: black;
+  margin-top: 0.5vh;
+  margin-bottom: -0.5vh;
+  margin-left: 1.5vw;
+  color: aliceblue;
+  padding: 1vw;
+}
+
+.EditLabel {
+  color: aliceblue;
+  margin-top: 2vh;
+  margin-left: 2.5vw;
+}
+
+.ApplyButton {
+  position: absolute;
+  border: none;
+  border-radius: 1vw;
+  background-color: #8198d4;
+  color: aliceblue;
+  width: 4vw;
+  height: 2vw;
+  top: 86vh;
+  left: 4vw;
+  font-size: 0.8vw;
+}
+
+.DiscardButton {
+  position: absolute;
+  border: none;
+  border-radius: 1vw;
+  background: rgb(194, 8, 56);
+  color: aliceblue;
+  width: 4vw;
+  height: 2vw;
+  top: 10vh;
+  left: 23vw;
+  font-size: 0.8vw;
+}
+
+.List {
+  overflow-y: scroll;
+  height: 60vh;
+  width: 98%;
+}
+
+.List::-webkit-scrollbar {
+  width: 5px;
+}
+
+.List::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+.List::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1vw;
+}
+
+.List::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

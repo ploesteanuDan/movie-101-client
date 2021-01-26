@@ -1,0 +1,85 @@
+.DisplayListContainer {
+  width: 85vw;
+  text-align: left;
+  margin-left: 1vw;
+}
+
+.EditList {
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  margin-left: 2.5vw;
+  display: flex;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  cursor: default;
+  background-color: rgb(24, 24, 24);
+  border-radius: 1vw;
+  max-height: 8vw;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 25vw;
+  width: 90vw;
+  overflow: hidden;
+}
+
+.EditHeader {
+  margin-top: 0;
+  margin-bottom: 0%;
+  margin-left: 2.5vw;
+  display: flex;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  color: aliceblue;
+}
+
+.EditField {
+  font-size: 1vw;
+  height: 3vh;
+  width: 5vw;
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.EditEntityButton {
+  border: none;
+  border-radius: 1vw;
+  width: 4vw;
+  height: 1.5vw;
+  line-height: 1.5vw;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.DeleteEntityButton {
+  border: none;
+  border-radius: 1vw;
+  width: 4vw;
+  height: 1.5vw;
+  line-height: 1.5vw;
+  font-size: 1vw;
+  cursor: pointer;
+  margin-left: 1vw;
+  background: rgb(194, 8, 56);
+  color: aliceblue;
+}
+
+.AddEntityButton {
+  font-size: 1vw;
+  border: none;
+  background-color: #8198d4;
+  color: aliceblue;
+  border: none;
+  border-radius: 1vw;
+  width: 4vw;
+  height: 1.5vw;
+  font-size: 1vw;
+  cursor: pointer;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-top: 2vh;
+}

@@ -14,7 +14,6 @@ export default class Hero extends Component {
     .then(
         (res)=>{
             this.setState({banner: res.data[0]})
-            console.log(this.state.banner)
         }
     )
         
@@ -41,18 +40,19 @@ componentDidMount(){
         return (
           <div>
             <div className="BgContainer">
-            <img src={"https:/i.imgur.com/" + this.state.banner.banner} className="BannerBackground"/>
+            <img src={"https:/i.imgur.com/" + this.state.banner.movieBanner} className="BannerBackground"/>
             <div className="BgBottomShadow"></div>
             </div>
             <div className="HeroContainer">
                <YouTube
-                    videoId={this.state.banner.trailer}
+                    videoId={this.state.banner.movieTrailer}
                     className="Hero" 
                     opts={opts}                 // defaults -> null
                    
                 />
                 <div className="HeroTitle">
-                    QUEEN'S GAMBIT
+                    <text className="HeroTitleText">{this.state.banner.movieName}</text>
+                    <button className="Discover" onClick={()=>{this.props.getDisplayItem(this.state.banner)}}>Discover</button>
                 </div>
             </div>
           </div>
